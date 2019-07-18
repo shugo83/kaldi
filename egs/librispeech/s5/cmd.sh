@@ -10,6 +10,6 @@
 # conf/queue.conf in http://kaldi-asr.org/doc/queue.html for more information,
 # or search for the string 'default_config' in utils/queue.pl or utils/slurm.pl.
 
-export train_cmd="queue.pl --mem 2G"
-export decode_cmd="queue.pl --mem 4G"
-export mkgraph_cmd="queue.pl --mem 8G"
+export train_cmd='slurm.pl --mem=4g JOB=1:4 a.JOB.log'
+export decode_cmd='slurm.pl --mem=4g JOB=1:4 a.JOB.log'
+export mkgraph_cmd='slurm.pl --mem=4g JOB=1:4 a.JOB.log'
